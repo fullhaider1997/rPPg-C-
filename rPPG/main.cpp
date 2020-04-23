@@ -12,6 +12,7 @@
 #include "plplot\plstream.h"
 #include "RealTimePlot.h"
 #include <opencv2/core/utility.hpp>
+#include <irr/Butterworth.h>
 
 cv::CascadeClassifier face_cascade;
 cv::CascadeClassifier eyes_cascade;
@@ -20,6 +21,11 @@ using namespace cv;
 
 int main()
 {
+	const int order = 4; // 4th order (=2 biquads)
+	Iir::Butterworth::LowPass<order> f;
+	const float samplingrate = 1000; // Hz
+	const float cutoff_frequency = 5; // Hz
+	f.setup(samplingrate, cutoff_frequency);
 
 	Rect2d roi1;
 	Mat frame;
