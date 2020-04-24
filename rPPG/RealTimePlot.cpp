@@ -49,6 +49,7 @@ RealTimePlot::RealTimePlot() {
 	y1 = y2 = y3 = y4 = 0.0;
 	dt = 0.1;
 
+
 }
 
 void RealTimePlot::plot(int value, float red, float green, float blue) 
@@ -58,6 +59,7 @@ void RealTimePlot::plot(int value, float red, float green, float blue)
 		plstripa(id1, 0, t, red);
 		plstripa(id1, 1, t, green);
 		plstripa(id1, 2, t, blue);
+		
 
 }
 	
