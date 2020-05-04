@@ -5,7 +5,7 @@ class RealTimePlot {
 
 public:
 	RealTimePlot();
-	void plot(int value, float red, float green, float blue);
+	void plot(int n,int value, float red, float green, float blue);
 	~RealTimePlot();
 
 

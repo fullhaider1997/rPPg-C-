@@ -4,7 +4,7 @@
 #include <chrono>
 
 RealTimePlot::RealTimePlot() {
-	ymin = 200;
+	ymin = 205;
 	ymax = 220;
 	tmin = 0.;
 	tmax = 10.;
@@ -19,7 +19,7 @@ RealTimePlot::RealTimePlot() {
 	legline[0] = "Red signal";   
 	legline[1] = "Green signal";  
 	legline[2] = "Blue signal";  
-	legline[3] = "";
+	legline[3] = "detrend red signal";
 
 	xlab = 0.; ylab = 0.25;     
 
@@ -52,13 +52,16 @@ RealTimePlot::RealTimePlot() {
 
 }
 
-void RealTimePlot::plot(int value, float red, float green, float blue) 
+void RealTimePlot::plot(int n,int value, float red, float green, float blue) 
 {
 	 	
-		t = (PLFLT)value * dt;
+		t = (PLFLT)n * dt;
 		plstripa(id1, 0, t, red);
 		plstripa(id1, 1, t, green);
 		plstripa(id1, 2, t, blue);
+		plstripa(id1, 3, t, value);
+
+		
 		
 
 }

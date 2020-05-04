@@ -32,5 +32,8 @@
     <ClInclude Include="RealTimePlot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MathSignal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
