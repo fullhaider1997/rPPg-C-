@@ -1,6 +1,8 @@
 # rPPg-C-
 Working on rPPg using C++
-Paper References:
+
+Research Paper References:
+
 https://www.ep.liu.se/ecp/129/002/ecp16129002.pdf
 
 https://link.springer.com/article/10.3758/s13428-019-01256-8
